@@ -65,6 +65,31 @@ public class RegisterFragment extends Fragment {
          myAlert.normalDialog("Have Space" ,"Please Fill Every Blank");
 
         } else {
+
+          try{
+
+              MyConstant myConstant = new MyConstant();
+              AssUserToServer assUserToServer = new AssUserToServer(getActivity());
+              assUserToServer.execute(nameString, userString, passwordString, myConstant.getUrlAddUserString());
+
+              if (Boolean.parseBoolean(assUserToServer.get())) {
+                  getActivity().getSupportFragmentManager().popBackStack();
+              } else {
+                  MyAlert myAlert = new MyAlert(getActivity());
+                  myAlert.normalDialog("Cannot Upload","Please Try Again");
+
+              }
+
+
+          }catch (Exception e){
+              e.printStackTrace();
+          }
+
+
+//            No Space
+
+
+
         }
 
 
