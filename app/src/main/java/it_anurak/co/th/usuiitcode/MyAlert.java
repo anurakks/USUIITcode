@@ -13,6 +13,7 @@ public class MyAlert {
     }
 
     public void normalDialog(String titleString, String messageString) {
+
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setCancelable(false);
         builder.setIcon(R.drawable.ic_action_alert);

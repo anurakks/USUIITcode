@@ -23,6 +23,7 @@
 
         <!--User-->
         <EditText
+            android:id="@+id/edtUser"
             android:inputType="text"
             android:hint="User :"
             android:layout_width="match_parent"
@@ -30,6 +31,7 @@
 
         <!--Password-->
         <EditText
+            android:id="@+id/edtPassword"
             android:inputType="textWebPassword"
             android:hint="Password:"
             android:layout_width="match_parent"
@@ -38,6 +40,7 @@
 
         <!--Login-->
         <Button
+            android:id="@+id/btnlogin"
             android:text="Login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
